@@ -1,0 +1,104 @@
+// Color Variables
+$col-blue:#0000FF;
+$col-accent-1:#1A2B96;
+$col-red:#FF0000;
+$col-white:rgb(255,255,255);
+$col-light-grey:#eeeeee;
+$col-dark:rgb(0, 0, 0);
+$col-dark-1:rgba(0,0,0,0.8);
+$col-primary:#FFA673;
+
+
+
+// Sass Functions
+@use "sass:math";
+
+@function toRem($size) {
+  $rem-size: math.div($size, 16px);
+  @return #{$rem-size}rem;
+  @debug 'toRem: #{$toRem}';
+}
+
+// Fonts Typography
+@mixin h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: toRem(28px);
+}
+
+
+// Media Query
+@mixin respond($breakpoint){
+    @if ($breakpoint == mobile-screen){
+        @media (max-width:768px){
+            @content;
+        }
+    }
+    @if ($breakpoint == tablet-screen){
+        @media (min-width:768px) and (max-width:1024px){
+            @content;
+        }
+    }
+
+    @if ($breakpoint == desktop-screen){
+        @media (min-width:1440px){
+            @content;
+        }
+    }
+}
+
+// Mixins
+@mixin border-radius($pixel...) {
+    border-radius: $pixel;
+    -webkit-border-radius: $pixel;
+    -moz-border-radius: $pixel;
+    -ms-border-radius: $pixel;
+    -o-border-radius: $pixel;
+}
+
+@mixin scale($scale) {
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+}
+  
+@mixin transition {
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+// Flex
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-justify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Basic Style Reset
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}

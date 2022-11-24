@@ -1,0 +1,22 @@
+export const Link = [
+    {
+        linkName:'Home',
+        href:'#home'
+    },
+    {
+        linkName:'About',
+        href:'#about'
+    },
+    {
+        linkName:'Portfolio',
+        href:'#portfolio'
+    },
+    {
+        linkName:'Skills',
+        href:'#skills'
+    },
+    {
+        linkName:'Contact',
+        href:'#contact'
+    },
+]
