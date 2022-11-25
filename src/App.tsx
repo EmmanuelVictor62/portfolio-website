@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import './App.scss';
 import Header from './Components/Header/index';
+import Slider from './Components/Home';
+// import "swiper/css/bundle";
 
 function App(){
   const [theme, setTheme] = useState(false)
@@ -20,7 +22,9 @@ function App(){
         />
       </div>
       <div className='app__home'>
-        {/* <Home /> */}
+        <Slider 
+          toggle={theme}
+        />
       </div>
     </div>
   )

@@ -1,0 +1,35 @@
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.app {
+  overflow: hidden;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.app__header-wrapper {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+}
+.app__toggler {
+  cursor: pointer;
+}
+.app__toggler i {
+  font-size: 20px;
+}
+.app__home {
+  padding-top: 63px;
+}/*# sourceMappingURL=App.css.map */
