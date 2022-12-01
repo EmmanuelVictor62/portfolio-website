@@ -31,10 +31,11 @@ export default function Slider(props:SliderProps) {
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard,Autoplay]}
         autoplay={{
-            delay: 4000,
+            delay: 5500,
             disableOnInteraction: true,
         }}
         className="swiper-container"
+        id="home"
       >
         {slideContent.map((slide,index) => {
             return(
@@ -44,18 +45,18 @@ export default function Slider(props:SliderProps) {
                 >
                     <div className="slide-content__container">
                         <p className="slide-content__heading">
-                            {slide.initials}   
-                                <span data-toggle={props.toggle}>
-                                    <Typewriter 
-                                        words={slide.name}
-                                        loop={false}
-                                        cursor
-                                        cursorStyle='|'
-                                        typeSpeed={180}
-                                        deleteSpeed={100}
-                                        delaySpeed={1000}
-                                    />
-                                </span>
+                            
+                            <span data-toggle={props.toggle}>
+                                <Typewriter 
+                                    words={slide.heading}
+                                    loop={false}
+                                    cursor
+                                    cursorStyle='|'
+                                    typeSpeed={180}
+                                    deleteSpeed={100}
+                                    delaySpeed={1000}
+                                />
+                            </span>
                         </p>
                         <p className="slide-content__description">
                             {slide.description}

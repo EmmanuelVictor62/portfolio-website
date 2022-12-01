@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.contact{
+    background-color: rgb(236, 239, 240);
+    padding: 3em 0em 5em 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+    &-sidebar{
+        // clip-path: polygon(0 7%, 0 13%, 0 0, 100% 0, 100% 12%, 86% 8%, 88% 90%, 100% 85%, 100% 100%, 0 100%, 0 84%, 0 88%);
+        width: 390px;
+        height: 570px;
+        background-color: rgb(12,137,255);
+        border-radius: 10px;
+        padding: 40px 20px 48px 48px;
+        box-sizing: border-box;
+
+        &__heading{
+            @include font(25px,600);
+            margin-bottom: 20px;
+        }
+
+        &__subheading{
+            @include font(18px,400);
+            line-height: 1.7rem;
+            margin-top: 0;
+        }
+
+        &__info-container{
+            display: flex;
+            gap: 17px;
+            align-items: center;
+            margin-bottom: 2em;
+        }
+
+        &__icon-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            width:50px;
+            height: 50px;
+        }
+
+        &__info{
+            @include font(18px,600);
+
+            & span{
+                @include font(16px,400);
+            }
+        }
+    }
+}

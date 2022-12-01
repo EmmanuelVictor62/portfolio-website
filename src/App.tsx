@@ -1,7 +1,13 @@
 import React,{useState} from 'react';
 import './App.scss';
+import { About } from './Components/About';
+import { Contact } from './Components/Contact';
 import Header from './Components/Header/index';
 import Slider from './Components/Home';
+import { Portfolio } from './Components/Portfolio';
+import { Services } from './Components/Services';
+import { Skills } from './Components/Skills';
+import { Testimonial } from './Components/Testimonial';
 // import "swiper/css/bundle";
 
 function App(){
@@ -26,6 +32,22 @@ function App(){
           toggle={theme}
         />
       </div>
+      <About
+        toggle={theme} 
+      />
+      <Services 
+        toggle={theme} 
+      />
+      <Skills 
+        toggle={theme}
+      />
+      <Portfolio />
+      <Testimonial 
+        toggle={theme}
+      />
+      <Contact 
+        toggle={theme}
+      />
     </div>
   )
 }

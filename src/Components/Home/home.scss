@@ -90,33 +90,10 @@
     }
 
     &__button{
-        @include transition;
-        @include font(16px,500);
-        @include scaleUpAnimation;
-        @include border-radius(60px);
-        width: 180px;
-        height: 46px;
-        display: inline-block;
-        padding: 0 30px;
-        text-transform: capitalize;
-        background-color: transparent;
-        color:$col-white;
-        border: 2px solid $col-accent-2;
-        cursor: pointer;
-        animation: scaleUp 1s ease 0s 1 normal forwards;
+        @include button;
 
         &:hover{
             background-color: $col-accent-2;
-        }
-
-        @include respond(mobile-screen){
-            @include font-size(14px);
-            width: 150px;
-            padding: 0 15px;
-        }
-
-        a{
-            color:$col-white;
         }
     }
 

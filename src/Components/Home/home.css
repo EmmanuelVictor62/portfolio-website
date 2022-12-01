@@ -17,7 +17,7 @@ a {
 .swiper-container {
   height: 92vh;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 764px) and (max-width: 1024px) {
   .swiper-container {
     height: 94vh;
   }
@@ -46,7 +46,7 @@ a {
 .slide-content__heading {
   font-size: 3.75rem;
   font-weight: 300;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   opacity: 0.9;
   font-family: "Times New Roman", Times, serif;
   -webkit-animation: bounceDown 1s ease 0s 1 normal forwards;
@@ -146,7 +146,7 @@ a {
     font-size: 2.8125rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 764px) and (max-width: 1024px) {
   .slide-content__heading {
     font-size: 3.3125rem;
   }
@@ -166,7 +166,7 @@ a {
     font-size: 2.8125rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 764px) and (max-width: 1024px) {
   .slide-content__heading span {
     font-size: 3.25rem;
   }
@@ -174,7 +174,7 @@ a {
 .slide-content__description {
   font-size: 1.25rem;
   max-width: 640px;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   opacity: 0.7;
   margin-top: 0px;
   line-height: 30px;
@@ -208,7 +208,7 @@ a {
     width: 89%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 764px) and (max-width: 1024px) {
   .slide-content__description {
     font-size: 1.5625rem;
   }
@@ -226,14 +226,13 @@ a {
   -moz-border-radius: 60px;
   -ms-border-radius: 60px;
   -o-border-radius: 60px;
-  width: 180px;
   height: 46px;
   display: inline-block;
   padding: 0 30px;
   text-transform: capitalize;
   background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #047AFE;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(4, 122, 254);
   cursor: pointer;
   -webkit-animation: scaleUp 1s ease 0s 1 normal forwards;
           animation: scaleUp 1s ease 0s 1 normal forwards;
@@ -254,18 +253,17 @@ a {
     transform: scale(1);
   }
 }
-.slide-content__button:hover {
-  background-color: #047AFE;
-}
 @media (max-width: 768px) {
   .slide-content__button {
     font-size: 0.875rem;
-    width: 150px;
     padding: 0 15px;
   }
 }
 .slide-content__button a {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
+}
+.slide-content__button:hover {
+  background-color: rgb(4, 122, 254);
 }
 .slide-content__link {
   transition: all 0.3s ease-out;
@@ -273,12 +271,12 @@ a {
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   opacity: 0.9;
   margin-left: 25px;
 }
 .slide-content__link:hover {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   text-decoration: underline;
 }
 @media (max-width: 768px) {

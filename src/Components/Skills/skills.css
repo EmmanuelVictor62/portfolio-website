@@ -1,0 +1,48 @@
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.skills {
+  font-family: "Times New Roman", Times, serif;
+  padding: 3em 0em 5em 0em;
+  text-align: center;
+}
+.skills[data-toggle=true] {
+  background-color: rgba(28, 41, 59, 0.96);
+  color: rgb(255, 255, 255);
+}
+.skills__heading {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.skills__icon {
+  font-size: 45px;
+}
+.skills__icon-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 80px;
+}
+@media (max-width: 768px) {
+  .skills__icon-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 764px) and (max-width: 1024px) {
+  .skills__icon-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.skills__icon-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 10px 0px;
+}/*# sourceMappingURL=skills.css.map */

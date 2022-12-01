@@ -15,6 +15,7 @@ a {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding-bottom: 1000px;
 }
 .app__header-wrapper {
   height: -webkit-max-content;
@@ -23,6 +24,7 @@ a {
   position: fixed;
   left: 0px;
   right: 0px;
+  z-index: 100;
 }
 .app__toggler {
   cursor: pointer;

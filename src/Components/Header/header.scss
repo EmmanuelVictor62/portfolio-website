@@ -2,22 +2,21 @@
 
 .header{
     height: fit-content;
-    box-shadow: 0px 1px 5px 0px rgba(26,26,26,0.3);
+    box-shadow: 0px 1px 5px 0px $col-dark-3;
     font-family: 'Times New Roman', Times, serif;
-    z-index: 10;
     
     &__main-container{
         @include flex-row;
-        background-color: $col-light-grey;
+        background-color: $col-grey;
         height: 60px;
         padding:0px 80px;
 
         &[data-toggle='true']{
             // background: rgb(9,11,31);
             // background: linear-gradient(90deg, rgba(9,11,31,1) 35%, rgba(38,48,48,0.9262298669467787) 100%);
-            background: rgb(39,52,65);
+            background: $col-dark-4;
             background: linear-gradient(90deg, rgba(39,52,65,1) 60%, rgba(45,42,42,1) 100%);
-            box-shadow: 0px 2px 5px 0px rgba(26,26,26,0.8);
+            box-shadow: 0px 2px 5px 0px $col-dark-5;
         }
 
         @include respond(mobile-screen){
@@ -26,7 +25,7 @@
     }
 
     &__name{
-        @include h1;
+        @include font(28px,600);
         background: $col-accent-1;
         background: linear-gradient(to right, #1A2B96 11%, #D22B96 84%);
         -webkit-background-clip: text;
@@ -53,7 +52,7 @@
         @include flex;
 
         &-item{
-            font-size: toRem(19px);
+            @include font-size(19px);
             padding: 0px 15px;
 
             & a{
@@ -114,17 +113,17 @@
         &-item{
             font-size: toRem(22px);
             padding: 0px 15px;
-            background-color: #181415;
+            background-color: $col-dark-6;
             width: 100%;
             padding: 15px 0px 15px 30px;
 
             &:not(:last-child){
-                border-bottom: 1px solid #c4c4c4;
+                border-bottom: 1px solid $col-grey-2;
             }
 
             & a{
                 @include transition;
-                color:white;
+                color:$col-white;
                 font-weight: 540;
                 cursor: pointer;
                 display: inline-block;
@@ -138,7 +137,7 @@
 
                 &:hover{
                     @include scale(1.1);
-                    color: rgb(246,172,13);
+                    color: $col-primary-2;
                 }
             }
         }
@@ -147,5 +146,5 @@
 
 
 .fa-sun{
-    color: $col-light-grey;
+    color: $col-grey;
 }

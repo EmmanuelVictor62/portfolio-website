@@ -18,9 +18,7 @@ export default function Header(props:HeaderProps){
     }
 
     return(
-        <div 
-            className={'header'} 
-        >
+        <div className={'header'}>
             <div 
                 className='header__main-container'
                 data-toggle={props.toggle}
@@ -74,6 +72,7 @@ export default function Header(props:HeaderProps){
                 </div>
             </div>
             
+            {/* Mobile Nav */}
             <div className='header__nav-container'>
                 {clicked && <ul className='header__mobile-nav'>
                     {Link.map((link,index) => {
