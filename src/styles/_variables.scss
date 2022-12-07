@@ -2,11 +2,14 @@
 $col-blue:rgb(0, 0, 255);
 $col-accent-1:rgb(26, 43, 150);
 $col-accent-2:rgb(4, 122, 254);
+$col-accent-3:rgb(12,137,255);
+$col-accent-4:rgba(12,137,255,0.89);
 $col-red:rgb(255, 0, 0);
 $col-red-2:rgba(255,0,0,0.9);
 $col-white:rgb(255, 255, 255);
 $col-grey:rgb(238, 238, 238);
 $col-grey-2:rgb(196, 196, 196);
+$col-grey-3:rgb(236, 239, 240);
 $col-dark:rgb(0, 0, 0);
 $col-dark-1:rgba(0,0,0,0.8);
 $col-dark-2:rgba(32, 31, 31, 0.7);
@@ -265,6 +268,30 @@ $col-primary-2:rgb(246,172,13);
         100% {
             opacity: 1;
             transform: translateX(0);
+        }
+    }
+}
+
+@mixin slideInRightBasic{
+    @keyframes slideRight {
+        0% {
+            transform: translateX(-380px);
+        }
+    
+        100% {
+            transform: translateX(0px);
+        }
+    }
+}
+
+@mixin slideInUpBasic{
+    @keyframes slideUp {
+        0% {
+            transform: translateY(200px);
+        }
+    
+        100% {
+            transform: translateY(0px);
         }
     }
 }

@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 import { contactField } from "../../Utils/constants";
 import '../Contact/contact.scss'
+import emailjs from 'emailjs-com'
 
 export interface ContactProps{
     name?:string
@@ -8,6 +9,37 @@ export interface ContactProps{
 }
 
 export const Contact = (props:ContactProps) => {
+    const [Name, setName] = useState('');
+    const [Email, setEmail] = useState('');
+    const [Subject, setSubject] = useState('');
+    const [Message, setMessage] = useState('');
+    const [statusMessage, setStatusMessage] = useState("");
+
+
+    const sendEmail = (e:any) => {
+        e.preventDefault()
+
+        setName('');
+        setEmail('')
+        setSubject('')
+        setMessage('')
+
+        emailjs.sendForm(
+            'service_ydox7am',
+            'template_qzlo23p',
+            e.currentTarget,
+            '3Kp0OppuErcqCxX2C'
+        ).then(res => {
+            console.log(res)
+            setStatusMessage("Email sent success");
+        }).catch(err => {
+            console.log(err)
+            setStatusMessage(`${err.text} happened`);
+        })
+    }
+
+    
+
     return(
         <div 
         className="contact" 
@@ -34,10 +66,62 @@ export const Contact = (props:ContactProps) => {
                     )
                 })}
             </div>
-            <div className="contact__form">
-                <h3>Get in touch</h3>
-                
-            </div>
+            <form className="contact__form-container" onSubmit={sendEmail}>
+                <h2>Get in touch</h2>
+                <div className="contact__form">
+                    <div className="contact__form-name-container">
+                        
+                        <input 
+                            type="text" 
+                            className="contact__form-input" 
+                            name="name" 
+                            id="name" 
+                            placeholder="Name"
+                            onChange={event => setName(event.target.value)} 
+                            value={Name}
+                            required
+                        />
+                    
+                        <input 
+                            type="text" 
+                            className="contact__form-input " 
+                            name="user-email" 
+                            id="user-email" 
+                            placeholder="Email"
+                            onChange={event => setEmail(event.target.value)}
+                            value={Email} 
+                            required 
+                        />
+                    </div>
+                    
+                    <input 
+                        type="text" 
+                        className="contact__form-input contact__form-input--subject" 
+                        name="Subject" 
+                        id="Subject" 
+                        placeholder="Subject" 
+                        onChange={event => setSubject(event.target.value)}
+                        value={Subject}  
+                    />
+                    
+                        
+                    <textarea  
+                        className="contact__form-input contact__form-input--textarea" 
+                        name="Message" 
+                        id="Message" 
+                        placeholder="Message" 
+                        cols={30}
+                        rows={7}
+                        onChange={event => setMessage(event.target.value)}
+                        value={Message} 
+                        required 
+                    />
+                    <p>{statusMessage}</p>
+                    <button type="submit" value='send' className="contact__form-button">
+                        Send Message
+                    </button>
+                </div>
+            </form>
         </div>
     )
 }
