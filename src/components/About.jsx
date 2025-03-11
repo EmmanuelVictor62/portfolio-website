@@ -3,27 +3,28 @@ import { motion } from "framer-motion";
 const About = () => {
   const experiences = [
     {
+      company: "AI InspiredShifter",
+      role: "Automation Specialist",
+      period: "2025",
+      location: "Australia (Remote)",
+      achievements: [
+        "Developed end-to-end automation pipelines for AI-powered video generation using ComfyUI and open-source models (Wan 2.2, Hauyan), enabling long-form YouTube content creation",
+        "Implemented dynamic subtitle generation and automated voiceover workflows using VibeVoice, streamlining video production processes",
+        "Automated content promotion and blog post generation workflows for digital products and services, improving reach and engagement",
+        "Built image upscaling and mockup automation pipelines using ComfyUI workflows with Qwen Image Edit and Real-Esrgan, supporting Etsy artwork promotion",
+        "Optimized multi-step automation systems, reducing manual content production effort by over 70%"
+      ]
+    },
+    {
       company: "Northsnow Ltd",
-      role: "Lead Automation Engineer",
-      period: "2024 - Present",
+      role: "Automation Engineer",
+      period: "2024 - 2025",
       location: "United Kingdom (Remote)",
       achievements: [
         "Architected and implemented end-to-end automation solutions for enterprise clients using n8n and custom integrations",
         "Led the development of AI-powered workflow automation systems, reducing manual processes by 75%",
         "Designed scalable automation architecture handling 100K+ daily workflow executions",
         "Mentored team members in automation best practices and emerging technologies",
-      ],
-    },
-    {
-      company: "AiNova Systems",
-      role: "Senior Automation Engineer",
-      period: "2023 - 2024",
-      location: "United Kingdom (Remote)",
-      achievements: [
-        "Developed intelligent automation solutions using AI and machine learning technologies",
-        "Built custom automation workflows for business process optimization, saving 1000+ manual hours monthly",
-        "Integrated complex systems using APIs and custom middleware solutions",
-        "Implemented automated testing and monitoring for critical automation workflows",
       ],
     },
     {
