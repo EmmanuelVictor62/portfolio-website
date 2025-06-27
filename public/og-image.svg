@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="630" fill="#18181B"/>
+    <path fill="#9333EA" opacity="0.1" d="M0 0h1200v630H0z"/>
+    <!-- Automation Flow Lines -->
+    <path stroke="#9333EA" stroke-width="4" fill="none" d="M200 315c100 0 150-100 250-100s150 200 250 200 150-100 250-100"/>
+    <path stroke="#9333EA" stroke-width="4" fill="none" opacity="0.5" d="M200 415c100 0 150-100 250-100s150 200 250 200 150-100 250-100"/>
+    <!-- Nodes -->
+    <circle cx="200" cy="315" r="20" fill="#9333EA"/>
+    <circle cx="450" cy="215" r="20" fill="#9333EA"/>
+    <circle cx="700" cy="415" r="20" fill="#9333EA"/>
+    <circle cx="950" cy="315" r="20" fill="#9333EA"/>
+    <!-- Text -->
+    <text x="600" y="120" font-family="Arial" font-size="48" fill="white" text-anchor="middle" font-weight="bold">Emmanuel Victor</text>
+    <text x="600" y="180" font-family="Arial" font-size="32" fill="#9333EA" text-anchor="middle">Automation Specialist &amp; Fullstack Developer</text>
+</svg> 

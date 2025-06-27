@@ -1,0 +1,103 @@
+```plaintext
+I want to build a stunning, animated, professional portfolio website using **React.js**, styled with **Tailwind CSS**, and enhanced with **Framer Motion** for smooth, scroll-triggered and hover animations (similar in feel to https://nubien.framer.website).
+
+The portfolio represents **Emmanuel Victor**, a Fullstack Developer and **Automation Specialist**, showcasing:
+- My skills, roles, and tools
+- My best projects and automation workflows
+- Ways for people to contact or schedule a meeting with me
+- A clear personal brand as a modern, reliable problem solver using automation and software engineering
+
+### 💼 Context & Bio:
+I have worked as:
+- Lead Automation Specialist at **Northsnow Ltd**, United Kingdom
+- Automation Engineer at **AiNova Systems**, United Kingdom (fictional placeholder for branding)
+- Senior Frontend Engineer at **Curator Video**
+- Lead Frontend Developer at **AvocadoNG**
+- Fullstack Developer & Co-founder at **Bedspace**
+- Junior Frontend Developer at **Curator Video**
+
+I specialize in:
+- **Automation Tools**: n8n, Zapier, Make, Airtable
+- **AI-powered Chatbots** and Workflow automation
+- **Coding**: React.js, TypeScript, Node.js, Python
+- Building scalable, clean, and efficient user interfaces
+- Real-time systems using WebSocket, API integrations (REST/GraphQL), and cloud (AWS)
+
+### 🔧 Portfolio Website Requirements:
+- **Dark-themed modern design** with clean typography, padding, smooth scroll, and framer-style animations
+- Responsive for **mobile and desktop**
+- Eye-catching **Hero Section** with animated intro about who I am, and what I do
+- **About Me Section** with short background, key achievements, and a clean layout
+- **Projects Section** featuring the **exact projects/workflows** from this Notion portfolio:  
+  https://www.notion.so/Portfolio-219c5599124880f5b108ea88a1a3beac  
+  → Group projects under categories like:
+  - Workflow Automations
+  - AI Chatbots
+  - Fullstack Projects
+  - Integrations
+
+  Each project should include:
+  - Title
+  - Short description
+  - Tools used
+  - Optional image or GIF preview
+  - GitHub or demo link (optional)
+
+- **Services Section** with cards or sections for:
+  - AI-powered Chatbots
+  - Automated Workflows
+  - Business Automation Consultancy
+  - Custom Integrations
+
+- **Contact Section** with:
+  - Contact form (Name, Email, Message) that sends form data via EmailJS or webhook
+  - Button to **Book a Call via Calendly**  
+    (use placeholder link: `https://calendly.com/emmanuel-victor`)
+
+- **Resume Section** with buttons:
+  - **View My Resume** (open in new tab)
+  - **Download Resume** (PDF download)
+
+- **Footer Section** with social media links, email, and copyright
+
+### 📁 Folder Structure Suggestion:
+```
+
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   ├── Services.jsx
+│   ├── Contact.jsx
+│   ├── Footer.jsx
+│   └── Resume.jsx
+├── assets/
+│   └── images/
+├── data/
+│   └── projects.js
+├── App.jsx
+├── index.js
+
+```
+
+### 📦 Required NPM Packages:
+- `framer-motion` for animations
+- `tailwindcss` for utility styling
+- `emailjs-com` or `formspree` for contact form submissions
+- `react-icons` for iconography
+- `react-router-dom` (if routing is needed)
+- Optionally `react-scroll` for smooth scrolling
+
+### 🧠 Extra Instructions:
+- Use placeholder text and images where needed, but structure everything so I can easily replace content.
+- Animations should be subtle, performant, and clean — not distracting.
+- Add smooth scrolling to sections.
+- Add scroll-triggered fade-ins or slide-ins for key sections using `Framer Motion`.
+- Set up basic SEO metadata with `react-helmet`.
+
+Build the full UI and install all necessary packages. Start with layout scaffolding, and generate reusable, well-named components.
+```
+
+---
