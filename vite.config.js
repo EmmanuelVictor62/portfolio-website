@@ -23,6 +23,15 @@ export default defineConfig({
   server: {
     headers: {
       "Cache-Control": "no-store",
+      "Content-Type": "text/javascript",
     },
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: "es2020",
+    },
+  },
+  esbuild: {
+    target: "es2020",
   },
 });
