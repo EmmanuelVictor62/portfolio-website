@@ -4,36 +4,22 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=()"
 
 [[headers]]
-  for = "*.js"
+  for = "/favicon.svg"
   [headers.values]
-    Content-Type = "text/javascript"
-
-[[headers]]
-  for = "*.mjs"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-[[headers]]
-  for = "/assets/js/*"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-[[headers]]
-  for = "*.svg"
-  [headers.values]
+    Cache-Control = "public, max-age=31536000"
     Content-Type = "image/svg+xml"
 
-# Handle SPA routing
+[[headers]]
+  for = "/automation-icon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    Content-Type = "image/svg+xml"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
-
-# Force HTTPS
-[[redirects]]
-  from = "http://*"
-  to = "https://:splat"
-  status = 301
-  force = true 
+  status = 200 
