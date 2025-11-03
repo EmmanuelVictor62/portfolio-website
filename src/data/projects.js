@@ -1,6 +1,48 @@
 export const projects = {
   workflowAutomations: [
     {
+      title: "Long Form Video Generator",
+      description:
+        "Automatically generate high-quality long-form videos from scripts or ideas using AI-powered tools and open-source models.",
+      content: `Context: Creating engaging long-form video content for YouTube or other platforms often requires script writing, video generation, voiceovers, subtitles, and post-production. This process is highly manual, time-consuming, and difficult to scale for multiple channels or frequent uploads.
+    
+      Problem: Producing consistent, high-quality long-form video content involves multiple tools and steps—video generation, image upscaling, subtitle burning, and voiceover creation. Managing all these manually is slow, error-prone, and limits content output.
+    
+      What I Built: An end-to-end automation workflow that transforms scripts or content ideas into fully produced long-form videos. The system uses open-source AI models such as Wan 2.2 and Hauyan for video generation, ComfyUI workflows for image creation, Real-Esrgan for upscaling, and VibeVoice for automated voiceovers. It dynamically creates subtitles, integrates assets, and outputs ready-to-publish videos.
+    
+      Outcome: Streamlined long-form video production, enabling rapid, high-quality content creation without manual intervention. This workflow allows multiple YouTube channels or projects to scale efficiently, saving significant production time while maintaining professional video quality.`,
+      tools: ["ComfyUI", "Wan 2.2", "Hauyan", "Real-Esrgan", "Qwen Image", "VibeVoice", "n8n"],
+      image: "/long-form-video.png"
+    },    
+    {
+      title: "AI Video Reels Generator",
+      description:
+        "Automatically generate 1-minute AI-powered video shorts optimized for YouTube, TikTok, and Instagram Reels.",
+      content: `Context: Creating short-form video content for platforms like YouTube Shorts, TikTok, or Instagram Reels requires ideation, video production, voiceovers, captions, and platform-specific formatting. Doing this manually for every short is time-consuming and limits content output.
+    
+      Problem: Producing consistent, engaging 1-minute videos involves multiple steps—AI video generation, dynamic subtitles, automated voiceovers, and platform-ready formatting. Handling this manually slows down content production and prevents scaling across multiple platforms.
+    
+      What I Built: An end-to-end automation workflow that transforms scripts, captions, or ideas into ready-to-publish 1-minute videos. The workflow uses AI models for video generation (Wan 2.2, Hauyan), image creation and upscaling (ComfyUI, Qwen Image, Real-Esrgan), automated voiceovers via VibeVoice, and dynamic subtitle generation. The system automatically formats outputs for YouTube Shorts, TikTok, and Instagram Reels.
+    
+      Outcome: Streamlined short-form video production, enabling fast, consistent, and high-quality content creation across multiple platforms. This workflow drastically reduces manual effort while increasing engagement and reach for social media channels.`,
+      tools: ["ComfyUI", "Wan 2.2", "Hauyan", "Real-Esrgan", "Qwen Image", "VibeVoice", "n8n", "TikTok API", "YouTube API"],
+      image: "/video-reels.png"
+    },
+    {
+      title: "YouTube Clips Generator",
+      description:
+        "Automatically generate short clips from long YouTube videos with dynamic subtitles, ready for social media sharing.",
+      content: `Context: Extracting engaging clips from long-form YouTube videos typically involves manually trimming footage, creating subtitles, and reformatting for social media platforms. This process is tedious, time-consuming, and limits how often clips can be shared.
+    
+      Problem: Manually creating shorts from long videos is inefficient—requiring timestamp selection, video trimming, subtitle generation, and final formatting. This slows down content repurposing and reduces engagement opportunities.
+    
+      What I Built: An automated workflow that generates clips from long YouTube videos by simply providing start and end timestamps. The system trims the video using FFmpeg, generates accurate subtitles with Whisper, burns them directly into the video, and outputs social-media-ready clips. Additional automations handle formatting for YouTube Shorts, TikTok, and Instagram Reels.
+    
+      Outcome: Significantly reduced time and effort for creating video highlights, enabling frequent and consistent sharing of content from existing videos. The workflow ensures precise clipping, accurate subtitles, and ready-to-publish outputs, boosting engagement across platforms.`,
+      tools: ["FFmpeg", "Whisper", "n8n", "YouTube API"],
+      image: "/youtube-clips.png"
+    },        
+    {
       title: "Social Media Post Generator",
       description:
         "Automatically generate LinkedIn & X posts from blog or feed articles using AI + n8n.",
@@ -74,6 +116,20 @@ export const projects = {
       tools: ["n8n", "OpenAI API", "Google Sheets", "Gmail"],
       image: "/product-marketing.png",
     },
+    {
+      title: "Trending YouTube Content Scraper",
+      description:
+        "Automatically discover trending YouTube videos with high virality potential and get recommendations for relevant channels.",
+      content: `Context: Keeping up with trending content on YouTube and identifying opportunities for viral videos is time-consuming. Manually tracking trends, analyzing engagement, and finding similar channels is inefficient and difficult to scale.
+    
+      Problem: Content creators and marketers struggle to consistently identify trending videos and channels with high engagement potential. Manual research is slow and often misses opportunities.
+    
+      What I Built: A fully automated content discovery workflow that scrapes trending YouTube videos, evaluates their virality potential based on views, likes, comments, and engagement metrics, and recommends relevant channels for inspiration or collaboration. The workflow stores all data in Baserow for easy querying and tracking, and uses Apify and the YouTube API for data collection. Additional automations notify the user of high-potential videos and channel recommendations.
+    
+      Outcome: Streamlined trend monitoring and content research, enabling creators to quickly identify viral video opportunities and relevant channels. This automation increases efficiency, reduces manual research time, and supports data-driven content strategy.`,
+      tools: ["Baserow", "Apify", "YouTube API", "n8n"],
+      image: "/trending-youtube.png"
+    },    
     {
       title: "Zoom Meeting to Hubspot",
       description:
