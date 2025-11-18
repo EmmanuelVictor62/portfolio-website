@@ -6,6 +6,36 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const cardsContainerRef = useRef(null);
 
+  // Helper function to format content with bold section headers
+  const formatContentLine = (line) => {
+    const trimmedLine = line.trim();
+    // Match various section header formats
+    const sectionHeaderPatterns = [
+      /^(Context\s*\/\s*Situation:?)/i,
+      /^(Context:?)/i,
+      /^(The\s+Problem:?)/i,
+      /^(Problem:?)/i,
+      /^(What\s+I\s+Built:?)/i,
+      /^(Result\s*\/\s*Outcome:?)/i,
+      /^(Outcome:?)/i,
+    ];
+    
+    for (const pattern of sectionHeaderPatterns) {
+      const match = trimmedLine.match(pattern);
+      if (match) {
+        const headerText = match[1];
+        const restOfText = trimmedLine.substring(match[0].length).trim();
+        return (
+          <span>
+            <strong className="font-bold text-white">{headerText}</strong>
+            {restOfText && ` ${restOfText}`}
+          </span>
+        );
+      }
+    }
+    return line;
+  };
+
   const projectCategories = [
     {
       title: "Workflow Automations",
@@ -13,12 +43,12 @@ const Projects = () => {
         "Streamlining processes and enhancing productivity through intelligent automation solutions.",
       projects: projects.workflowAutomations || [],
     },
-    {
-      title: "AI & Chatbots",
-      description:
-        "Leveraging artificial intelligence to create intelligent conversational interfaces.",
-      projects: projects.aiChatbots || [],
-    },
+    // {
+    //   title: "AI & Chatbots",
+    //   description:
+    //     "Leveraging artificial intelligence to create intelligent conversational interfaces.",
+    //   projects: projects.aiChatbots || [],
+    // },
     {
       title: "Web Applications",
       description:
@@ -107,19 +137,35 @@ const Projects = () => {
         {selectedProject && (
           <div className="p-6">
             <div className="mb-6">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full rounded-lg mb-6"
-              />
+              <div className="relative w-full mb-6 rounded-lg overflow-hidden bg-black/20 flex items-center justify-center modal-image">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-auto rounded-lg"
+                  style={{ 
+                    maxHeight: '70vh',
+                    objectFit: 'contain',
+                    imageRendering: 'auto',
+                    width: '100%',
+                    height: 'auto'
+                  }}
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-2">
                 {selectedProject.title}
               </h3>
-              {selectedProject.content.split("\n").map((line, idx) => (
-                <p key={idx} className="text-neutral-400 mb-3">
-                  {line}
-                </p>
-              ))}
+              {selectedProject.content.split("\n").map((line, idx) => {
+                const formattedLine = formatContentLine(line);
+                // Skip empty lines
+                if (!line.trim()) return null;
+                return (
+                  <p key={idx} className="text-neutral-400 mb-3">
+                    {formattedLine}
+                  </p>
+                );
+              })}
 
               <div className="flex flex-wrap gap-4">
                 {selectedProject.demoUrl && (
