@@ -102,7 +102,7 @@
   }
 
   .section-padding {
-    @apply py-16 px-4 md:px-6;
+    @apply py-12 md:py-16 px-4 md:px-6;
   }
 
   .bg-gradient-dark {
@@ -401,4 +401,17 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+/* High-quality image rendering for modal and all images */
+.modal-image,
+.modal-image img {
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Ensure images maintain quality when scaled */
+img {
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
 }
