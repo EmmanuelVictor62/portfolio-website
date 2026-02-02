@@ -74,12 +74,12 @@ const Contact = () => {
       value: "emmanuelvictor.dev@gmail.com",
       link: "mailto:emmanuelvictor.dev@gmail.com",
     },
-    {
-      icon: PhoneIcon,
-      title: "Whatsapp",
-      value: "+234 708 285 8032",
-      link: "tel:+2347082858032",
-    },
+    // {
+    //   icon: PhoneIcon,
+    //   title: "Whatsapp",
+    //   value: "+234 708 285 8032",
+    //   link: "tel:+2347082858032",
+    // },
     {
       icon: CalendarIcon,
       title: "Schedule",

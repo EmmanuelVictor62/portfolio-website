@@ -15,11 +15,11 @@ const Footer = () => {
     {
       title: "Social",
       links: [
-        {
-          name: "Twitter (X)",
-          href: "https://x.com/royalmanuel62",
-          icon: FaTwitter,
-        },
+        // {
+        //   name: "Twitter (X)",
+        //   href: "https://x.com/royalmanuel62",
+        //   icon: FaTwitter,
+        // },
         {
           name: "LinkedIn",
           href: "https://www.linkedin.com/in/emmanuel-victor-isaac/",
