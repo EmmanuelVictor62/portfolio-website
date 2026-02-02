@@ -5,6 +5,7 @@ import {
   EnvelopeIcon,
   CalendarIcon,
   PhoneIcon,
+  MapPinIcon,
 } from "@heroicons/react/24/outline";
 
 const Contact = () => {
@@ -80,6 +81,12 @@ const Contact = () => {
     //   value: "+234 708 285 8032",
     //   link: "tel:+2347082858032",
     // },
+    {
+      icon: MapPinIcon,
+      title: "Timezone",
+      value: "UTC +1",
+      link: "https://www.google.com/maps/place/Lagos",
+    },
     {
       icon: CalendarIcon,
       title: "Schedule",
